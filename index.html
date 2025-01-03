@@ -114,12 +114,22 @@ gzxbif=0.6;
 </script>
 
 
-<A NAME="Key Publications"><h2>Key Publications</h2></A>
+window.onload = function() {
+    var references = document.querySelectorAll(".reference");
+    for (var i = 0; i < references.length; i++) {
+        references[i].querySelector(".ref-number").textContent = "[" + (i + 1) + "]";
+    }
+};
+</script>
+
+<A NAME="Key Publications"><h2>Publications</h2></A>
+<p><b><font size="3"> Co-authored</b>: </p>
 <font size="3"> 
 <ul>
+ 
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q1 Top, IF=<script> document.write(tgrsif); </script></b>: Y. Li, J. Li, <b>J. He*</b>, X. Liu, and Q. Yuan, 
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 Top, IF=<script> document.write(tgrsif); </script></b>: Y. Li, J. Li, <b>J. He*</b>, X. Liu, and Q. Yuan, 
 “An optimization-driven network with knowledge prior injection for HSI denoising,” 
 <i>IEEE Transactions on Geoscience and Remote Sensing (<b>IEEE TGRS</b>)</i>, vol. 61, pp. 1-17, 2023.
 [<a href= "https://ieeexplore.ieee.org/document/10333986" target="_blank">Link</a>] 
@@ -128,8 +138,8 @@ gzxbif=0.6;
 </span>
 </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q1 Top, IF=<script> document.write(isprsif); </script></b>: <b>J. He</b>, Q. Yuan, J. Li, Y. Xiao, and L. Zhang, 
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 Top, IF=<script> document.write(isprsif); </script></b>: <b>J. He</b>, Q. Yuan, J. Li, Y. Xiao, and L. Zhang, 
 “A self-supervised remote sensing image fusion framework with dual-stage self-learning and spectral super-resolution injection,” 
 <i>ISPRS Journal of Photogrammetry and Remote Sensing (<b>ISPRS</b>)</i>, 
 vol. 204, pp. 131-144, 2023.
@@ -140,8 +150,8 @@ vol. 204, pp. 131-144, 2023.
 </span>
 </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q1 Top, IF=<script> document.write(ifif); </script></b>: <b>J. He</b>, Q. Yuan, J. Li, Y. Xiao, D. Liu, H. Shen, and L. Zhang, 
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 Top, IF=<script> document.write(ifif); </script></b>: <b>J. He</b>, Q. Yuan, J. Li, Y. Xiao, D. Liu, H. Shen, and L. Zhang, 
 “Spectral super-resolution meets deep learning: achievements and challenges,” 
 <i>Information Fusion (<b>INFFUS</b>)</i>, 
 vol. 97, pp. 101812, 2023. 
@@ -152,8 +162,8 @@ vol. 97, pp. 101812, 2023.
 </span>
  </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q1 Top, IF=<script> document.write(ifif); </script></b>: <b>J. He</b>, Q. Yuan, J. Li, and L. Zhang, 
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 Top, IF=<script> document.write(ifif); </script></b>: <b>J. He</b>, Q. Yuan, J. Li, and L. Zhang, 
 “PoNet: A universal physical optimization-based spectral super-resolution network for arbitrary multispectral images,” 
 <i>Information Fusion (<b>INFFUS</b>)</i>, 
 vol. 80, pp. 205-225, 2022. 
@@ -164,8 +174,8 @@ vol. 80, pp. 205-225, 2022.
 </span>
 </p>
     
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q1 TOP, IF=<script> document.write(tgrsif); </script></b>: <b>J. He</b>, Q. Yuan, J. Li, L. Zhang, 
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 TOP, IF=<script> document.write(tgrsif); </script></b>: <b>J. He</b>, Q. Yuan, J. Li, L. Zhang, 
 “A Knowledge Optimization-driven Network with Normalizer-Free Group ResNet Prior for Remote Sensing Image Pan-sharpening,” 
 <i>IEEE Transactions on Geoscience and Remote Sensing (<b>IEEE TGRS</b>)</i>, 
 vol. 60, pp. 1-16, 2022, Art no. 5410716. 
@@ -175,8 +185,8 @@ vol. 60, pp. 1-16, 2022, Art no. 5410716.
 </span>
 </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q1 Top, IF=<script> document.write(tnnlsif); </script></b>: <b>J. He</b>, J. Li, Q. Yuan, H. Shen, and L. Zhang, 
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 Top, IF=<script> document.write(tnnlsif); </script></b>: <b>J. He</b>, J. Li, Q. Yuan, H. Shen, and L. Zhang, 
 “Spectral Response Function-Guided Deep Optimization-Driven Network for Spectral Super-Resolution,” 
 <i>IEEE Transactions on Neural Networks and Learning Systems (<b>IEEE TNNLS</b>)</i>, 
 vol. 33, no. 9, pp. 4213-4227, 2022. 
@@ -188,8 +198,8 @@ vol. 33, no. 9, pp. 4213-4227, 2022.
 </span>
 </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
- <b>SCI Q1 TOP, IF=<script> document.write(jagif); </script></b>: <b>J. He</b>, Q. Yuan, J. Li, Y. Xiao, X. Liu, and Y. Zou, 
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 TOP, IF=<script> document.write(jagif); </script></b>: <b>J. He</b>, Q. Yuan, J. Li, Y. Xiao, X. Liu, and Y. Zou, 
 “DsTer: A dense spectral transformer for remote sensing spectral super-resolution,” 
 <i>International Journal of Applied Earth Observation and Geoinformation (<b>JAG</b>)</i>, 
 vol. 109, pp. 102773, 2022. 
@@ -199,8 +209,8 @@ vol. 109, pp. 102773, 2022.
 </span>
 </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q1 TOP, IF=<script> document.write(grsmif); </script>, The only-student author, <font color="#FF0000">ESI Top 1%</font></b>: L.-J. Deng, G. Vivone, M. E. Paoletti, G. Scarpa, <b>J. He</b>, Y. Zhang, J. Chanussot, and A. Plaza, 
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 TOP, IF=<script> document.write(grsmif); </script>, The only-student author, <font color="#FF0000">ESI Top 1%</font></b>: L.-J. Deng, G. Vivone, M. E. Paoletti, G. Scarpa, <b>J. He</b>, Y. Zhang, J. Chanussot, and A. Plaza, 
 “Machine Learning in Pansharpening: A Benchmark, From Shallow to Deep Networks,” 
 <i>IEEE Geoscience and Remote Sensing Magazine (<b>IEEE GRSM</b>)</i>, 
 vol. 10, no. 3, pp. 279-315, 2022.
@@ -211,8 +221,8 @@ vol. 10, no. 3, pp. 279-315, 2022.
 </span>
 </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q2, IF=<script> document.write(rsif); </script></b>: <b>J. He</b>, J. Li, Q. Yuan, H. Li, and H. Shen, 
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q2, IF=<script> document.write(rsif); </script></b>: <b>J. He</b>, J. Li, Q. Yuan, H. Li, and H. Shen, 
 “Spatial-spectral Fusion in Different Swath Widths by a Recurrent Expanding Residual Convolutional Neural Network,” 
 <i>Remote Sensing (<b>RS</b>)</i>, 
 vol. 11, no. 19, 2203, 2019. 
@@ -222,8 +232,8 @@ vol. 11, no. 19, 2203, 2019.
 </span>
 </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q4, IF=<script> document.write(gzxbif); </script></b>: <b>何江</b>, 袁强强, 李杰, 
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q4, IF=<script> document.write(gzxbif); </script></b>: <b>何江</b>, 袁强强, 李杰, 
 “面向多光谱卫星成像的广义光谱超分辨率,” 
 <i>光子学报</i>, vol. 52, no. 2, pp. 0210002, 2023.
 [<a href= "http://www.photon.ac.cn/thesisDetails#10.3788/gzxb20235202.0210002&lang=zh" target="_blank">Link</a>] 
@@ -231,8 +241,8 @@ vol. 11, no. 19, 2203, 2019.
 </span>
 </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>EI, 中国卓越期刊</b>: 张良培, <b>何江</b>, 杨倩倩, 肖屹, 袁强强, 
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>EI, 中国卓越期刊</b>: 张良培, <b>何江</b>, 杨倩倩, 肖屹, 袁强强, 
 “数据驱动的多源遥感信息融合研究进展,” 
 <i>测绘学报</i>, vol. 51, no. 7, pp. 1317-1337, 2022.
 [<a href= "http://xb.sinomaps.com/CN/10.11947/j.AGCS.2022.20220171" target="_blank">Link</a>] 
@@ -241,77 +251,39 @@ vol. 11, no. 19, 2203, 2019.
 </span>
 </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q1 TOP, IF=<script> document.write(isprsif); </script></b>: X. Jin, <b>J. He</b>, Y. Xiao, Z. Lihe, X. Liao, J. Li, and Q. Yuan,
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 TOP, IF=<script> document.write(isprsif); </script></b>: X. Jin, <b>J. He</b>, Y. Xiao, Z. Lihe, X. Liao, J. Li, and Q. Yuan,
 “RFE-VCR: Reference-enhanced transformer for remote sensing video cloud removal,” 
 <i>ISPRS Journal of Photogrammetry and Remote Sensing (<b>ISPRS</b>)</i>, vol. 214, pp. 179-192, 2024.
 [<a href= "https://www.sciencedirect.com/science/article/abs/pii/S092427162400248X" target="_blank">Link</a>] 
 </span>
 </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q1 TOP, IF=<script> document.write(ifif); </script></b>: Z. Lihe, <b>J. He</b>, Q. Yuan, X. Jin, Y. Xiao, and L. Zhang,
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 TOP, IF=<script> document.write(ifif); </script></b>: Z. Lihe, <b>J. He</b>, Q. Yuan, X. Jin, Y. Xiao, and L. Zhang,
 “PhDnet: A novel physic-aware dehazing network for remote sensing images,” 
 <i>Information Fusion (<b>INFFUS</b>)</i>, vol. 106, 102277, 2024.
 [<a href= "https://www.sciencedirect.com/science/article/abs/pii/S1566253524000551" target="_blank">Link</a>] 
 </span>
 </p>
  
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q1 TOP, IF=<script> document.write(isprsif); </script></b>: Y. Peng, <b>J. He</b>, Q. Yuan, S. Wang, X. Chu, and L. Zhang,
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 TOP, IF=<script> document.write(isprsif); </script></b>: Y. Peng, <b>J. He</b>, Q. Yuan, S. Wang, X. Chu, and L. Zhang,
 “Automated glacier extraction using a Transformer based deep learning approach from multi-sensor remote sensing imagery,” 
 <i>ISPRS Journal of Photogrammetry and Remote Sensing (<b>ISPRS</b>)</i>, vol. 202, pp. 303–313, 2023.
 [<a href= "https://www.sciencedirect.com/science/article/pii/S0924271623001806" target="_blank">Link</a>] 
 </span>
 </p>
 
-<p class="reference" style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
-<b>SCI Q1 TOP, IF=<script> document.write(ifif); </script>, <font color="#FF0000">ESI Top 1%</font></b>: Y. Xiao, Q. Yuan, K. Jiang, <b>J. He</b>, Y. Wang, and L. Zhang,
+<p style="text-indent: -1.6rem;margin-left: 0rem;text-align: justify;">
+<span class="reference"><span class="ref-number"></span><b>SCI Q1 TOP, IF=<script> document.write(ifif); </script>, <font color="#FF0000">ESI Top 1%</font></b>: Y. Xiao, Q. Yuan, K. Jiang, <b>J. He</b>, Y. Wang, and L. Zhang,
 “From degrade to upgrade: Learning a self-supervised degradation guided adaptive network for blind remote sensing image super-resolution,” 
 <i>Information Fusion (<b>INFFUS</b>)</i>, vol. 96, pp. 297–311, 2023.
 [<a href= "https://www.sciencedirect.com/science/article/pii/S1566253523001100" target="_blank">Link</a>] 
 </span>
 </p>
 
-
 </ul>
-<script>
-    window.onload = function() {
-        // 获取所有参考文献元素
-        var references = Array.from(document.querySelectorAll(".reference"));
-
-        // 对参考文献按编号降序排序
-        references.sort(function(a, b) {
-            var numA = parseInt(a.querySelector(".ref-number")?.textContent.replace(/[^\d]/g, '')); 
-            var numB = parseInt(b.querySelector(".ref-number")?.textContent.replace(/[^\d]/g, '')); 
-            return (numB || 0) - (numA || 0); // 降序排序，如果没有编号默认0
-        });
-
-        // 获取最大编号（即排序后的第一个编号）
-        var maxNum = references.length; // 使用参考文献的总数作为最大编号
-
-        // 更新排序后的参考文献编号
-        var list = document.querySelector("ul");
-        for (var i = 0; i < references.length; i++) {
-            // 为每个参考文献动态生成编号
-            var refNumber = "[" + (maxNum - i) + "]"; // 编号从最大值开始
-            var refElement = references[i];
-            
-            // 检查是否已经有 ref-number 元素
-            var refNumberElement = refElement.querySelector(".ref-number");
-            if (!refNumberElement) {
-                refNumberElement = document.createElement('span'); 
-                refNumberElement.classList.add("ref-number"); 
-                refElement.insertBefore(refNumberElement, refElement.firstChild);
-            }
-            
-            refNumberElement.textContent = refNumber; // 设置编号
-
-            // 将排序后的文献重新添加到页面
-            list.appendChild(refElement);
-        }
-    };
-</script>
 <br />
  
 
