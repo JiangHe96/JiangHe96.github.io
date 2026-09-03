@@ -112,80 +112,6 @@
 </div>
 </section>
 
-<section class="visitor-panel" aria-labelledby="visitor-title">
-<div class="visitor-text">
-<h2 id="visitor-title">Visitor Map</h2>
-<p>Thank you for visiting.</p>
-</div>
-<div class="visitor-widget">
-<script>
-(function() {
-    if (window.location.protocol !== "file:") {
-        return;
-    }
-
-    function fixMapUrl(url) {
-        if (!url) {
-            return url;
-        }
-
-        return url
-            .replace(/^\/\/(mapmyvisitors\.com|dev\.mapmyvisitors\.com)\//i, "https://$1/")
-            .replace(/^file:\/\/(mapmyvisitors\.com|dev\.mapmyvisitors\.com)\//i, "https://$1/");
-    }
-
-    var originalSetAttribute = Element.prototype.setAttribute;
-    Element.prototype.setAttribute = function(name, value) {
-        if (this.tagName === "SCRIPT" && name.toLowerCase() === "src") {
-            value = fixMapUrl(value);
-        }
-
-        return originalSetAttribute.call(this, name, value);
-    };
-
-    var originalAppendChild = Element.prototype.appendChild;
-    Element.prototype.appendChild = function(child) {
-        if (child && child.tagName === "SCRIPT") {
-            var src = child.getAttribute("src") || child.src;
-            var fixedSrc = fixMapUrl(src);
-            if (fixedSrc && fixedSrc !== src) {
-                child.setAttribute("src", fixedSrc);
-            }
-        }
-
-        return originalAppendChild.call(this, child);
-    };
-
-    function repairMapStyles() {
-        var widget = document.getElementById("mapmyvisitors-widget");
-        if (!widget) {
-            return;
-        }
-
-        var styledElements = widget.querySelectorAll("[style]");
-        for (var i = 0; i < styledElements.length; i++) {
-            styledElements[i].style.cssText = styledElements[i].style.cssText
-                .replace(/url\((['"]?)\/\/(mapmyvisitors\.com|dev\.mapmyvisitors\.com)\//ig, "url($1https://$2/")
-                .replace(/file:\/\/(mapmyvisitors\.com|dev\.mapmyvisitors\.com)\//ig, "https://$1/");
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        var attempts = 0;
-        var timer = window.setInterval(function() {
-            repairMapStyles();
-            attempts += 1;
-            if (attempts > 24) {
-                window.clearInterval(timer);
-            }
-        }, 250);
-    });
-})();
-</script>
-<script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=xnDNBOt6_afbLEtF2uVnTANnk21T55S6zUXbOqplsZA&co=16423c&cl=ffffff&w=300"></script>
-</div>
-</section>
-
 <section class="detail-pages" aria-live="polite">
 <div class="detail-actions">
 <a class="overview-link" href="#Explore">Back to overview</a>
@@ -556,6 +482,96 @@ vol. 11, no. 19, 2203, 2019.
 
 </section>
 
+<footer class="visitor-map-dock" aria-label="Visitor map">
+<button type="button" class="visitor-map-button" id="visitor-map-toggle" aria-expanded="false" aria-controls="visitor-map-popover" title="Visitor Map">
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M12 21s6-5.4 6-11a6 6 0 0 0-12 0c0 5.6 6 11 6 11Z"></path>
+<circle cx="12" cy="10" r="2.4"></circle>
+</svg>
+<span class="sr-only">Show visitor map</span>
+</button>
+
+<div class="visitor-popover" id="visitor-map-popover" hidden aria-labelledby="visitor-title">
+<div class="visitor-popover-head">
+<div>
+<h2 id="visitor-title">Visitor Map</h2>
+<p>Thank you for visiting.</p>
+</div>
+<div class="visitor-popover-actions">
+<a class="visitor-detail-link" href="https://mapmyvisitors.com/web/1c53m" target="_blank" rel="noopener noreferrer">Details</a>
+<button type="button" class="visitor-close" aria-label="Close visitor map">&times;</button>
+</div>
+</div>
+<div class="visitor-widget">
+<script>
+(function() {
+    if (window.location.protocol !== "file:") {
+        return;
+    }
+
+    function fixMapUrl(url) {
+        if (!url) {
+            return url;
+        }
+
+        return url
+            .replace(/^\/\/(mapmyvisitors\.com|dev\.mapmyvisitors\.com)\//i, "https://$1/")
+            .replace(/^file:\/\/(mapmyvisitors\.com|dev\.mapmyvisitors\.com)\//i, "https://$1/");
+    }
+
+    var originalSetAttribute = Element.prototype.setAttribute;
+    Element.prototype.setAttribute = function(name, value) {
+        if (this.tagName === "SCRIPT" && name.toLowerCase() === "src") {
+            value = fixMapUrl(value);
+        }
+
+        return originalSetAttribute.call(this, name, value);
+    };
+
+    var originalAppendChild = Element.prototype.appendChild;
+    Element.prototype.appendChild = function(child) {
+        if (child && child.tagName === "SCRIPT") {
+            var src = child.getAttribute("src") || child.src;
+            var fixedSrc = fixMapUrl(src);
+            if (fixedSrc && fixedSrc !== src) {
+                child.setAttribute("src", fixedSrc);
+            }
+        }
+
+        return originalAppendChild.call(this, child);
+    };
+
+    function repairMapStyles() {
+        var widget = document.getElementById("mapmyvisitors-widget");
+        if (!widget) {
+            return;
+        }
+
+        var styledElements = widget.querySelectorAll("[style]");
+        for (var i = 0; i < styledElements.length; i++) {
+            styledElements[i].style.cssText = styledElements[i].style.cssText
+                .replace(/url\((['"]?)\/\/(mapmyvisitors\.com|dev\.mapmyvisitors\.com)\//ig, "url($1https://$2/")
+                .replace(/file:\/\/(mapmyvisitors\.com|dev\.mapmyvisitors\.com)\//ig, "https://$1/");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var attempts = 0;
+        var timer = window.setInterval(function() {
+            repairMapStyles();
+            attempts += 1;
+            if (attempts > 24) {
+                window.clearInterval(timer);
+            }
+        }, 250);
+    });
+})();
+</script>
+<script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=xnDNBOt6_afbLEtF2uVnTANnk21T55S6zUXbOqplsZA&co=16423c&cl=ffffff&w=300"></script>
+</div>
+</div>
+</footer>
+
  
 </main>
 </div>
@@ -608,6 +624,46 @@ $(function(){
         history.pushState(null, "", "#Explore");
         setActivePage("", false);
         scrollToElement($("#Explore"));
+    });
+
+    var $visitorDock = $(".visitor-map-dock");
+    var $visitorToggle = $("#visitor-map-toggle");
+    var $visitorPopover = $("#visitor-map-popover");
+
+    function setVisitorMapOpen(isOpen) {
+        $visitorDock.toggleClass("is-open", isOpen);
+        $visitorToggle.attr("aria-expanded", isOpen ? "true" : "false");
+
+        if (isOpen) {
+            $visitorPopover.removeAttr("hidden");
+        } else {
+            $visitorPopover.attr("hidden", true);
+        }
+    }
+
+    $visitorToggle.on("click", function(event){
+        event.stopPropagation();
+        setVisitorMapOpen($visitorPopover.is("[hidden]"));
+    });
+
+    $(".visitor-close").on("click", function(event){
+        event.stopPropagation();
+        setVisitorMapOpen(false);
+        $visitorToggle.trigger("focus");
+    });
+
+    $visitorPopover.on("click", function(event){
+        event.stopPropagation();
+    });
+
+    $(document).on("click", function(){
+        setVisitorMapOpen(false);
+    });
+
+    $(document).on("keydown", function(event){
+        if (event.key === "Escape") {
+            setVisitorMapOpen(false);
+        }
     });
 
     $(window).on("hashchange popstate", function(){
